@@ -164,6 +164,7 @@ func force_update_mesh() -> void:
 	var st = SurfaceTool.new()
 	st.begin(Mesh.PRIMITIVE_TRIANGLES)
 	st.set_material(mat)
+	st.set_smooth_group(-1)
 	for idx in vertices.size():
 		st.set_color(mat.albedo_color)
 		st.set_uv(uvs[idx])
